@@ -1,15 +1,19 @@
 <template>
-  <HelloWorld msg="Vue 3, Vite, TypeScript & Tailwind CSS" />
+  <div class="bg-chat-pattern bg-[#8CABD8] w-screen h-screen flex flex-col">
+    <Header :name="name" :phone_number="phone_number" />
+    <Content />
+    <InputBox />
+  </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
+<script setup lang="ts">
+import { toRef } from "vue";
+import { globalState } from "../store";
 
-import HelloWorld from "../components/HelloWorld.vue";
+import Header from "../components/Header.vue";
+import InputBox from "../components/InputBox.vue";
+import Content from "../components/Content.vue";
 
-export default defineComponent({
-  components: {
-    HelloWorld,
-  },
-});
+const name = toRef(globalState, "name");
+const phone_number = toRef(globalState, "phone_number");
 </script>

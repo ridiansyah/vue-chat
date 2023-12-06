@@ -1,5 +1,7 @@
 import { reactive } from 'vue'
 
 export const globalState = reactive({
-  count: 0,
+  name: "Susanto Arif",
+  phone_number: "6282131292626",
+  drop_down_open: ""
 })
