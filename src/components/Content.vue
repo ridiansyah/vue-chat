@@ -59,13 +59,12 @@
                     >
                       <a
                         class="flex block rounded-md px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer"
-                        role="menuitem"
+                        @click="$emit('delete', items.id)"
                       >
                         Delete
                       </a>
                       <a
                         class="flex block rounded-md px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer"
-                        role="menuitem"
                       >
                         Reply
                       </a>
@@ -107,13 +106,12 @@
                     >
                       <a
                         class="flex block rounded-md px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer"
-                        role="menuitem"
+                        @click="$emit('delete', items.id)"
                       >
                         Delete
                       </a>
                       <a
                         class="flex block rounded-md px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer"
-                        role="menuitem"
                       >
                         Reply
                       </a>
